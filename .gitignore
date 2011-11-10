@@ -1,0 +1,7 @@
+*.pyc
+*~
+.nfs*
+.*.swp
+*.pyc-2.4
+.dotest
+*bulkloader-*

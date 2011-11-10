@@ -1,0 +1,39 @@
+application: scroll-viewer
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /api/get_verse.*
+  script: get_verse.py
+
+- url: /api/get_translation
+  script: get_translation.py
+
+- url: /api/write_shapes
+  script: write_shapes.py
+  login: admin
+
+- url: /api/drop_table
+  script: drop_table.py
+  login: admin
+
+- url: /viewer
+  static_dir: viewer
+  
+- url: /sitemap
+  script: sitemap.py
+
+- url: /isaiah
+  script: isaiah.py
+
+- url: /api/get_isaiah_desc
+  script: get_isaiah_desc.py
+
+- url: /example.html
+  static_files: example.html
+  upload: example.html
+
+
+builtins:
+- remote_api: on
