@@ -12,7 +12,7 @@ handlers:
 
 - url: /api/write_shapes
   script: write_shapes.py
-  login: admin
+  #login: admin
 
 - url: /api/drop_table
   script: drop_table.py
@@ -31,6 +31,10 @@ handlers:
   script: get_isaiah_desc.py
 
 - url: /example.html
+  static_files: example.html
+  upload: example.html
+
+- url: /
   static_files: example.html
   upload: example.html
 
