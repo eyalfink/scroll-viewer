@@ -75,7 +75,8 @@ goog.gsv.view = goog.gsv.view || {};
     this.hide();
 
     var map;
-    var tileSize = scroll.tileSize;
+    var tileSizeX = scroll.tileSizeX;
+    var tileSizeY = scroll.tileSizeY;
     var maxZoom = scroll.maxZoom;
     var minZoom = scroll.minZoom;
     var viewSize;
@@ -94,9 +95,9 @@ goog.gsv.view = goog.gsv.view || {};
            return blackPixelURL;
 
             return tilePrefix +
-              zoom + '_' + coord.x + '_' + coord.y + '.jpg';
+              zoom + '_' + coord.x + '_' + coord.y + '.png';
           },
-        tileSize: new google.maps.Size(tileSize, tileSize),
+        tileSize: new google.maps.Size(tileSizeX, tileSizeY),
         zoom: minZoom,
         maxZoom:maxZoom,
         minZoom:minZoom
@@ -105,7 +106,7 @@ goog.gsv.view = goog.gsv.view || {};
       type = new google.maps.ImageMapType(mapOptions);
 
       map = new google.maps.Map(el.find('.gsv-map-container')[0], {
-        tileSize: new google.maps.Size(tileSize, tileSize),
+        tileSize: new google.maps.Size(tileSizeX, tileSizeY),
         zoom: minZoom,
         disableDefaultUI: true,
         maxZoom: maxZoom,

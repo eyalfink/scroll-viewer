@@ -4,4 +4,5 @@
 .*.swp
 *.pyc-2.4
 .dotest
-*bulkloader-*
+*bulkloader-log*
+*bulkloader-progress*
